@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+/*body {
+  
+  color: #fff;
+  
+}*/
+
+
+#grid {
+  list-style: none;
+  margin-left: 0%;
+    
+}
+
+.gc {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -.25em;
+  min-height: 1px;
+  padding-left: 40px;
+  vertical-align: top;
+}
+
+.gc--1-of-3 {
+  width: 33.33333%;
+}
+
+.gc--2-of-3 {
+  width: 66.66666%;
+}
+#section00{
+    width: 100%;
+    border-color: black transparent;
+    border-style: solid;
+    padding: 100px;
+    position: relative;
+    padding: 40px;
+    border-color: black transparent;
+    z-index: 9;
+
+}
+.naccs { 
+    max-width: 100%;
+    min-width: 500px;
+    height: 20%;
+  position:absolute;
+    top: 20%;
+    left: 0;
+  /*margin: auto 0;*//*  относительно верха и низа*/
+    z-index: 4;/* накладывание блоков друг на друга*/
+}
+.text p{
+*/padding: 100px;
+    float: left;
+    width: 70vw;
+    height: 80vh;
+    position: fixed;
+    overflow: scroll;
+}
+.light p{
+    display: none;
+}
+
+.naccs .menu div {
+
+  padding: 60px 20px 60px 20px;
+   /*отступ от не выбраной ячейки*/
+    width: 100%;
+    height: 100%;
+  margin-bottom: 20px;
+  color: #303F9F;
+    font-size: 2em;
+    text-align: cente;
+   background-color: rgba(66, 56, 66, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;/* форма курсора в приделах элемента*/
+  position: relative;
+  vertical-align: middle;
+  font-size: 2em;
+  -webkit-transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+/*    text-decoration: none;*/
+	
+}
+
+.naccs .menu div:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.naccs .menu div span.light {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: auto;
+  left: 10px;
+   background-color: rgba(66, 56, 66, 0.8);
+  border-radius: 100%;
+  -webkit-transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.naccs .menu div.active span.light {
+    
+  background-color: #FBC02D;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  top: 0;
+  border-radius: 0;
+}
+
+.naccs .menu div.active {
+  color: #FBC02D;
+  padding: 150px 20px 150px 20px;
+    
+}
+
+.nacc {
+  position: relative;
+  height: 0px;
+    width: 1000px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nacc li {
+  opacity: 0;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  position: absolute;
+  list-style: none;
+  -webkit-transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nacc li.active {
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+    
+}
+
+.nacc li p {
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+    .naccs .menu div{
+        font-size: 1em;
+        margin-bottom: 10px;
+        padding: 0px 50px 500px 0px;
+    }
+    .text p{
+        display: none;
+    }
+    .light p{
+    display:inline;
+        overflow: scroll;
+        font-size: 10px;
+        height: 100px;
+        width: 100%;
+        
+}
+    .razdel{
+        display: none;
+    }
+}

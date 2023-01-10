@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Navigation Menu With Smooth Scrolling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+
+<!--  шрифты-->
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans+Condensed:300|Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300&amp;subset=cyrillic" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <!--анимация при скроле-->
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" media="all" href="css/animate.css">
+<script src="js/wow.min.js"></script>
+<script>new WOW().init();</script>
+    <!--######################-->
+    <link rel="stylesheet" href="css/menu.css">
+<!--обложка-->
+      <link rel="stylesheet" href="css/template.css">
+<!-- карусель обоев-->
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--форма обратной связи-->
+    <link rel="stylesheet" href="./css/main.css">
+    <!--кнопка звонка-->
+    <link rel="stylesheet" href="css/button.css">
+    <!--обратная связь-->
+  <link rel="stylesheet" href="css/call.css">
+    <!--###############-->
+<!--
+    <link rel="stylesheet" href="css/styles.css">  
+-->
+    
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">-->
+<!--галлерея-->
+    
+    
+	<script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script>	
+    
+    
+	<script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script>	
+
+	<link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+	
+	<script type='text/javascript' src='unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+	<!--анимация ртдельных элементов-->
+    <script src="js/wow.min.js"></script>
+<script>new WOW().init();</script>
+    <!--############-->
+<!--	меню портфолио-->
+	 <link rel="stylesheet" href="css/table.css">
+    
+</head>
+
+<body>
+<!--####################-->
+    <div id="modal" class="modal">
+    <div>
+       <div class="text" align="center">
+       <div id="blok_tel">
+  <form action="" method="post" class="form1">
+ЗАКАЗ ОБРАТНОГО ЗВОНКА
+<input type="text" name="tel" class="inputbox" value="Номер телефона с кодом"
+       onfocus="(this.value == '0123456789') && (this.value = '')"
+       onblur="(this.value == '') && (this.value = '0123456789')">
+<input type="submit" class="button" name="submit_tel">
+  </form>
+<?if(isset($_POST["submit_tel"])) 
+{
+$email = 'ваша_почта@yandex.com';
+/* Отправляем email */
+mail($email, "Заказ обратного звонка на сайте ...", "\n
+Посетитель заказал обратный звонок! \n
+Телефон : ".$_POST['tel']."
+");
+echo 'Заявка принята!';
+}
+?>
+</div>
+
+
+</div>
+        <a href="#close" title="Закрыть">Закрыть</a>
+    </div>        
+</div>
+    <!--###############-->
+        <header >
+  <nav>
+    <div class="name">
+      <div id="logo"><h1><img src="imag/logo.png" width="25%"></h1></div>
+      <div id="word-mark"><!-- <p2> моющих <br>пылесосов </p2>--></div>
+        
+    </div>
+    <div id="menu">
+      <div id="menu-toggle">
+        <div id="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+     <ul class="hidden-menu">
+        <li id="page"><a href="#section00">Цена</a></li>
+        <li id="page"> <a href="#section01">О нас</a></li>
+        <li id="page"><a href="#section02">Контакты</a></li>
+        <!--<li id="page"><a href="#section03">Статьи</a></li>-->
+    </ul>
+    </div>
+  </nav>
+   
+
+   <div class="all">
+       
+         <div class="name"></div>
+  <a id="slayd"></a>
+    <input checked type="radio" name="respond" id="desktop">
+      <article id="slider">
+          <input checked type="radio" name="slider" id="switch1">
+          <input type="radio" name="slider" id="switch2">
+          <input type="radio" name="slider" id="switch3">
+          <input type="radio" name="slider" id="switch4">
+          <input type="radio" name="slider" id="switch5">
+        <div id="slides">
+          <div id="overflow">
+            <div class="image"><!--	карусель-->
+              <article><img src="imag/7.jpg"></article>
+              <article><img src="imag/7.jpg"></article>
+              <article><img src="imag/7.jpg"></article>
+              <article><img src="imag/7.jpg"></article>
+              <article><img src="imag/7.jpg"></article>
+            </div>
+          </div>
+        </div>
+        <div id="controls"><!--	 ме-->
+          <label for="switch1"></label>
+          <label for="switch2"></label>
+          <label for="switch3"></label>
+          <label for="switch4"></label>
+          <label for="switch5"></label>
+        </div>
+        <div id="active">
+          <label for="switch1"></label>
+          <label for="switch2"></label>
+          <label for="switch3"></label>
+          <label for="switch4"></label>
+          <label for="switch5"></label>
+        </div>
+      </article>
+       
+ </div>
+    </header>
+        
+        
+       <!--	якорь-->  <section id="section00">
+    <div id="heading">
+        <h2><p class=" bounceInRight wow ">Цена</p></h2>
+    </div>
+
+  <div class="naccs">
+  <div id="grid" class="bounceInLeft
+
+ wow">
+   <div class="gc gc--1-of-3">
+    <div class="menu">
+    
+     <div class="active">
+         <span class="light"><p>Фотосъемка семейных и корпоративных событий
+Крещение малыша
+Венчание
+День рождения
+Девичник
+Корпоративы, концерты
+Спортивные и автомобильные соревнования
+Любой вид репортажной, постановочно-репортажной съемки.</p>
+         </span>
+         <span class="razdel">Программа скидок</span>
+        </div>
+     
+     <div><span class="light">
+         <p>A vine (Latin vīnea "grapevine", "vineyard", from vīnum "wine") 
+         in the narrowest sense is the grapevine (Vitis), but more generally it can refer to any
+         plant with a growth habit of trailing or scandent (that is, climbing) stems, lianas or runners.
+       </p>
+         </span>
+         <span  class="razdel">Цены</span>
+        </div>
+     
+     <!--<div><span class="light"></span><span>Love story</span></div>
+     
+     <div><span class="light"></span><span>Свадьба</span></div>
+     
+     
+     <div><span class="light"></span><span>Портрет</span></div>
+     
+     <div><span class="light"></span><span>В ожидании</span></div>
+      
+     <div><span class="light"></span><span>Семейная</span></div>-->
+     
+    </div>
+    
+   </div>
+   <div class="gc gc--2-of-3">
+    <ul class="nacc">
+     <li class="active">
+      <div class="text" >
+       <p>Репортажная фотосъемка
+Фотосъемка семейных и корпоративных событий
+Крещение малыша
+Венчание
+День рождения
+Девичник
+Корпоративы, концерты
+Спортивные и автомобильные соревнования
+Любой вид репортажной, постановочно-репортажной съемки.
+       </p>
+      </div>
+     </li>
+     <li>
+      <div class="text" >
+       <p>Профессиональный моющий пылесос от немецкого бренда Karcher станет отличным помощником для хозяек. Благодаря нему можно удалить пыль, грязь, остатки напитков и еды с напольного покрытия (ковролина, паркета, ламината) и мягкой мебели. Также устройство наверняка оценят и мужчины – к примеру, с ним легко выполнить химчистку салона автомобиля.
+
+Мощность агрегата составляет 1250 Вт, а скорость распыления моющих средств – 1 литр в минуту, что позволяет привести в порядок большую квартиру или просторный офис в течение одного-двух часов.
+
+В комплекте с пылесосом вы получите набор насадок для сбора пыли и воды, а также более тщательной очистки гладкого напольного покрытия
+       </p>
+      </div>
+     </li>
+    <!-- <li>
+      <div>
+       <p>LOVE STORY ФОТОСЕССИЯ
+это прекрасная возможность запечатлеть ваши чувства и счастье на фотографиях. Для фотосессии можно придумать интересные образы, снять историю Вашего знакомства или провести красивую портретную фотосессию в студии. Ваши совместные фотографии можно распечатать на холсте и они красиво дополнят интерьер квартиры.
+       </p>
+      </div>
+     </li>
+     <li>
+      <div>
+       <p>Свадьба
+одно из прекраснейших событий в жизни молодых! Всегда хочется, чтобы оно отложилось в нашей памяти только яркими воспоминаниями, а чтобы эти воспоминания можно было сохранить для своих детей, внуков и даже правнуков – существуют фотограф на свадьбу. Только свадебный фотограф, который чувствует пару, переживает с ней этот день, может стать с ними единым целым во время свадебной съемки и сможет гарантировать хороший результат, который будет радовать вас многие года счастливой жизни!
+       </p>
+      </div>
+     </li>
+     <li>
+      <div>
+       <p>Профессиональная портретная фотосессия для девушки или парня. Это индивидуальная фотосессия в студии или в городе, на природе. Идеально подобранный и созданный образ, подходящее место для съемки отразит Вашу индивидуальность и поможет создать прекрасные фотографии на долгую память.
+       </p>
+      </div>
+     </li>
+     <li>
+      <div>
+       <p>Когда будущая мама
+ждёт малыша, а папа пребывает в совсем новом для себя состоянии - эти эмоции невозможно повторить. Но их хочется запомнить. И я готова в этом помочь! Красивая фотосессия «В ожидании» станет прекрасным началом альбома с фотографиями малыша! У вас уже есть детки? Они тоже могут участвовать в фотосессии! Приходите всей Вашей семьей!
+       </p>
+      </div>
+     </li>
+     <li>
+      <div>
+       <p>Фотосессия для всей семьи
+Подарите себе прекрасные семейные фотографии в студии или в живописном месте Минска и окрестностях.
+
+Приходите на фотосессию всей семьей!  Берите с собой бабушек и дедушек! Это будет для Вас прекрасным праздником, на котором Вы получите бесценные фотографии. Фотографии, которые можно отправлять друзьям и родственникам, которые можно будет рассматривать вечерами и улыбаться от того, что счастье есть и оно вокруг Вас!
+
+А чтобы фотографии получились идеальными, позаботиться о подготовке к семейной фотосъемке стоит заранее. А я помогу и подскажу, как это сделать лучше.
+
+(Семейная фотосессия - фотосессия с участием трех и более людей, деток) </p>
+      </div>
+     </li>-->
+    </ul>
+   </div>
+  </div>
+ 
+        </div>
+<!--
+  <div id="heading">
+  </div>  
+</section>
+-->
+</section>
+	
+	<!--<section id="section01">
+  <div id="heading">
+  </div>
+</section>-->
+
+<section id="section01">
+  <div id="heading">
+      <h2>
+          <p class=" bounceInRight wow">Скидки</p>
+      </h2> 
+    </div>
+    <div id="cridka" class="bounceInLeft wow"><p>Экономия</p></div>
+     <div id="prokat">
+           <h2>Прокат моющих<br> пылесосов</h2>
+         <div id="dws" class="callme_button" >
+             <!--кнопка-->
+    
+<a href="#modal" id="butt">Заказать услугу</a>
+            <!-- <a href="#modal" id="butt" class="button openModal">Заказать обратный звонок</a>-->
+             <!--#########-->
+         </div>
+    </div>
+    <div class="cards">
+    <div id="wrap" class=" fadeInUpBig wow">
+  <div class="card">
+    <div class="front"><span><p id="m">24 </p> <p>руб.</p></span></div>
+    <div class="back"><span><p id="m">6</p>суток проката<br><br> <hr> <br> 12руб/сутки</span></div>
+  </div>
+</div>
+    <div id="wrap1" class=" fadeInUpBig wow">
+  <div class="card">
+    <div class="front"><span><p id="m">9 </p> <p>руб.</p> </span></div>
+      <div class="back"><span><p id="m">3</p> суток проката<br><br> <hr> <br> 13руб/сутки</span></div>
+  </div>
+</div>
+    <div id="wrap2" class=" fadeInRightBig wow">
+  <div class="card">
+    <div class="front"><span><p id="m">12</p> <p> руб.</p></span></div>
+    <div class="back"><span><p id="m">4</p>суток проката<br><br> <hr> <br> 13руб/сутки</span></div>
+  </div>
+</div>
+    <div id="wrap3" class=" fadeInRightBig wow">
+  <div class="card">
+    <div class="front"><span><p id="m">20 </p> <p>руб.</p></span></div>
+    <div class="back"><span><p id="m">5</p>суток проката<br><br> <hr> <br> 12руб/сутки</span></div>
+  </div>
+</div>
+    <div id="wrap4" class=" fadeInUpBig wow">
+  <div class="card">
+      <div class="front"><span><p id="m">40 </p> <p>руб.</p> </span></div>
+    <div class="back"><span><p id="m">8</p>суток проката<br><br> <hr> <br> 12руб/сутки</span></div>
+  </div>
+</div>
+    <div id="wrap5" class=" bounceInDown wow">
+  <div class="card">
+    <div class="front"><span><p id="m">4 </p> <p>руб.</p> </span></div>
+    <div class="back"><span><p id="m">2</p>суток проката<br><br> <hr> <br> 11руб/сутки </span></div>
+  </div>
+</div>
+    <div id="wrap6" class=" bounceInDown wow">
+  <div class="card">
+    <div class="front"><span><p id="m">35</p> <p> руб.</p> </span></div>
+    <div class="back"><span><p id="m">7</p> суток проката<br><br> <hr> <br> 11руб/сутки</span></div>
+  </div>
+</div>
+</div>
+</section>
+
+<section id="section02">
+         <div class="overlay">
+        <div id="heading1">
+        <h2><p class=" fadeInDownBig wow ">Контакты</p></h2>
+    </div>
+        <h2><p>Телефоны</p></h2>
+         <div id="heading2" class="swing wow">
+             <div class="telephon">
+                 </div>
+             <div class="telephon1">
+                 <p>г.Гомель,Беларусь</p>
+                 <br>
+                 <br>
+                 <p>Дегтярева Наталья Петровна</p>
+                 <br>
+                 <p>+375(25)616-87-03</p>
+                  <p>+375(25)617-23-50</p>
+             </div>
+    </div>
+        <div id="content-wrapper" class=" bounceInRight wow ">
+            <h1 class="title">Ваше сообщение</h1> 
+
+            <form action="" class="form-wrapper">
+
+                <div class="form-group">
+                    <label for="name" class="form-label">Ваше имя</label>
+                    <input id="name" type="text" class="form-input" placeholder="Введите имя" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Ваше email</label>
+                    <input id="email" type="email" class="form-input" placeholder="Введите email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Сообщение</label>
+                    <textarea id="message" placeholder="Напишите пару строк" class="form-message" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <input class="form-submit" type="submit" value="Отправить сообщение">
+                
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--   обложка-->
+<!--   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>-->
+<!--   галлеркя-->
+    <script  src="js/lorem.js"></script>
+    
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery("#gallery").unitegallery({
+				tiles_type:"justified"
+			});
+		}); 
+	</script>
+   
+<!--  меню портфолио-->
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/indexr.js"></script>
+   
+</body>
+</html>
